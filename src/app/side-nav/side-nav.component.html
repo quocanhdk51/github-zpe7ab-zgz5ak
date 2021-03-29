@@ -1,0 +1,49 @@
+<div id="mySidenav" class="sidenav">
+  <div class="sidenav-item togglebtn" (click)="toggleNav()">
+    <div *ngIf="isDesktop; else elseBlock">
+      <div *ngIf="isOpened; else elseBlock">
+        <mat-icon class="sidenav-item-icon">chevron_left</mat-icon>
+      </div>
+      <ng-template #elseBlock>
+        <mat-icon class="sidenav-item-icon">chevron_right</mat-icon>
+      </ng-template>
+    </div>
+    <ng-template #elseBlock>
+      <div *ngIf="isOpened; else elseBlock">
+        <mat-icon class="sidenav-item-icon">chevron_right</mat-icon>
+      </div>
+      <ng-template #elseBlock>
+        <mat-icon class="sidenav-item-icon">chevron_left</mat-icon>
+      </ng-template>
+    </ng-template>
+  </div>
+  <div class="sidenav-item">
+    <mat-icon class="sidenav-item-icon">home</mat-icon>
+    <span class="sidenav-item-text">Home</span>
+  </div>
+  <div class="sidenav-item">
+    <mat-icon class="sidenav-item-icon">info</mat-icon>
+    <span class="sidenav-item-text">About</span>
+  </div>
+  <div class="sidenav-item">
+    <mat-icon class="sidenav-item-icon">support_agent</mat-icon>
+    <span class="sidenav-item-text">Services</span>
+  </div>
+  <div class="sidenav-item">
+    <mat-icon class="sidenav-item-icon">work</mat-icon>
+    <span class="sidenav-item-text">Clients</span>
+  </div>
+  <div class="sidenav-item">
+    <mat-icon class="sidenav-item-icon">call</mat-icon>
+    <span class="sidenav-item-text">Contact</span>
+  </div>
+  <div class="sidenav-item profile">
+    <mat-icon class="sidenav-item-icon">account_box</mat-icon>
+    <span class="sidenav-item-text">Profile</span>
+  </div>
+</div>
+<div id="opacity" (click)="toggleNav()"></div>
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main" class="main">
+  <!-- <app-top-nav [openNav]="openNav" [closeNav]="closeNav"></app-top-nav> -->
+</div>
